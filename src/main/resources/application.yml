@@ -1,5 +1,4 @@
 spring:
-
   batch:
     jdbc:
       initialize-schema: always
@@ -12,7 +11,7 @@ spring:
     password: 0008
   jpa:
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: none  # JPA에서는 DDL을 수행하지 않도록 설정
     open-in-view: false
     database: mysql
     database-platform: org.hibernate.dialect.MySQLDialect
@@ -22,6 +21,6 @@ spring:
         default_batch_fetch_size: 1000
         format_sql: true
         show_sql: true
-        use_sql_comments: true
+        use_sql_comments:
         naming:
           physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
